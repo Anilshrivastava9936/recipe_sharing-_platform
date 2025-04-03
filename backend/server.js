@@ -10,18 +10,17 @@ const app=express()
 const PORT=3000
 app.use(express.json());
 
-// Connecting to DB Atlas
+//Connecting to DB Atlas
 mongoose.connect(process.env.MONGO_URL).then(
-    ()=>console.log("DB connected successfully")
+    ()=>console.log("DB connected successfully...")
 ).catch(
-    // console.log("manoggoose");
-    (err)=>console.log("md",err)
+    (err)=>console.log(err)
 )
 
 //API landing page http://localhost:3000/
 app.get('/',async(req,res)=>{
     try{
-        res.send("<h2 style='color:red;text-align:center'>Welcome to the MERN Stack  Backend</h2>")
+        res.send("<h2 style='color:red;text-align:center'>Welcome to the MERN Stack | Week 2 | Backend</h2>")
     }
     catch(err)
     {
