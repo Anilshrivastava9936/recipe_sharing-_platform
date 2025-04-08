@@ -3,8 +3,10 @@ import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import Recipe from './Pages/Recipe'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css'
+// import './index.css';
 
 
 const App = () => {
@@ -15,7 +17,8 @@ const App = () => {
         {/* Redirect to Login if not logged in */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/home" element={ <Home /> } />
+        <Route path="/" element={ <Home /> } />
+        <Route path="/recipe" element={ <Recipe /> } />
       </Routes>
     </Router>
   )
