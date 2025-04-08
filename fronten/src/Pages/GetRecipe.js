@@ -9,7 +9,7 @@ const RecipeList = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get('http://localhost:3002/add/recipe'); // Replace with your backend API URL
+        const response = await axios.get('https://recipe-sharing-platform-backend-0hza.onrender.com/add/recipe'); // Replace with your backend API URL
         setRecipes(response.data);
       } catch (err) {
         setError('Error fetching recipes');

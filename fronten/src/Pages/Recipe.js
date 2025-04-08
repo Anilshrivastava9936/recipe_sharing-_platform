@@ -38,7 +38,7 @@ const AddRecipeForm = () => {
 
     try {
        
-        const response = await axios.post('http://localhost:3002/add/recipe', payload);
+        const response = await axios.post('https://recipe-sharing-platform-backend-0hza.onrender.com/add/recipe', payload);
         console.log('Recipe added:', response.data);
         navigate('/home');
     } catch (err) {

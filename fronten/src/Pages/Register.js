@@ -15,7 +15,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3002/auth/register", form);
+      const res = await axios.post("https://recipe-sharing-platform-backend-0hza.onrender.com/auth/register", form);
       setMessage(res.data.message);
       const { token, user } = res.data;
       localStorage.setItem("token", token);

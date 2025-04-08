@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3002/auth/login", form);
+      const res = await axios.post("https://recipe-sharing-platform-backend-0hza.onrender.com/auth/login", form);
       console.log("user data",res.data)
       const { token, user } = res.data;
       localStorage.setItem("token", token);

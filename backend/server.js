@@ -8,7 +8,7 @@ import cors from 'cors'
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3002 || "https://recipe-sharing-platform-backend-0hza.onrender.com";
 app.use(express.json());
 
 app.use(
