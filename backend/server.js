@@ -8,12 +8,12 @@ import cors from 'cors'
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3002 || "https://recipe-sharing-platform-backend-0hza.onrender.com";
+const PORT = process.env.PORT || 3002 ;
 app.use(express.json());
 
 app.use(
     cors({
-        origin: "https://recipe-sharing-platform-wine.vercel.app/", // ✅ Allow requests from React frontend
+        origin:  ["https://recipe-sharing-platform-wine.vercel.app", "http://localhost:3000"], // ✅ Allow requests from React frontend
         credentials: true,
     })
 );
