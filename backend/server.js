@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use(
     cors({
-        origin: "http://localhost:3000", // ✅ Allow requests from React frontend
+        origin: "https://recipe-sharing-platform-wine.vercel.app/", // ✅ Allow requests from React frontend
         credentials: true,
     })
 );
